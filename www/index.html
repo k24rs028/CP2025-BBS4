@@ -54,6 +54,7 @@ function getAuthErrorMessage(error) {
 function updateCharacterCount(inputId, counterId, maxLength) {
     const input = $(`#${inputId}`);
     const counter = $(`#${counterId}`);
+    counter.text(`残り${maxLength}文字`);
 
     input.on('input', () => {
         const length = input.val().length;
