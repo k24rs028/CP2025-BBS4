@@ -23,6 +23,10 @@ let currentEditId = null;
 // ログイン中のユーザ
 let currentUser = null;
 
+function togglePostFormBackground(){
+    $('#cntenInput').toggleClass('bg-changed');
+}
+
 // メッセージ表示処理
 function showMessage(message, type = 'success') {
     const messageArea = $('#messageArea');
