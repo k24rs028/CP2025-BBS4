@@ -154,6 +154,7 @@ function formatTimestamp(timestamp) {
         hour: '2-digit',
         minute: '2-digit'
     });
+
 }
 
 // 投稿の編集権限チェック
@@ -565,7 +566,14 @@ window.addEventListener('unload', () => {
         <!-- 投稿フォーム（ログイン時表示） -->
         <div class="post-form logged-in">
             <div class="form-group">
+                <div class="label-with-button">
                 <label for="contentInput">投稿内容</label>
+                <button type="button"
+                class="btn-background"
+                onclick="togglePostFormBackground()">
+                背景変更
+                </button>
+                </div>
                 <textarea id="contentInput" class="form-control"
                           placeholder="投稿内容を入力してください"></textarea>
                 <small class="character-count" id="contentCount">0/1000</small>
